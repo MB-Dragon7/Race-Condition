@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TuneCraft Audio — Aria Pro Wireless Headphones</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FBF8F3;
+    --card: #FFFFFF;
+    --ink: #161B33;
+    --muted: #6B7280;
+    --coral: #FF5A3C;
+    --coral-dark: #E8461F;
+    --teal: #0E9E90;
+    --border: #EDE7DC;
+    --success: #16A34A;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+  }
+  h1, h2, h3, .display {
+    font-family: 'Sora', sans-serif;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 6vw;
+    border-bottom: 1px solid var(--border);
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Sora', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+  }
+  .logo-mark {
+    width: 34px; height: 34px; border-radius: 10px;
+    background: linear-gradient(135deg, var(--coral), #FFB86B);
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-weight: 800; font-size: 16px;
+  }
+  nav a {
+    color: var(--muted);
+    text-decoration: none;
+    margin-left: 28px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  main {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 56px 6vw 90px;
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 56px;
+    align-items: start;
+  }
+  .product-visual {
+    aspect-ratio: 1 / 1;
+    border-radius: 24px;
+    background: linear-gradient(155deg, #1B1F3B 0%, #2E2560 55%, var(--coral) 130%);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .product-visual::before {
+    content: "";
+    position: absolute;
+    width: 480px; height: 480px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.18), transparent 65%);
+    top: -120px; right: -120px;
+  }
+  .headphone-icon {
+    width: 46%;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.35));
+  }
+  .badge-row { display: flex; gap: 8px; margin-bottom: 18px; }
+  .badge {
+    font-size: 12px; font-weight: 600; padding: 5px 12px; border-radius: 999px;
+    background: #FFF1EC; color: var(--coral-dark); border: 1px solid #FFD9CC;
+  }
+  .badge.teal { background: #E9FBF8; color: var(--teal); border-color: #C7F0EA; }
+  h1.title {
+    font-size: 34px; font-weight: 800; line-height: 1.15; margin: 0 0 10px;
+    letter-spacing: -0.5px;
+  }
+  .subtitle { color: var(--muted); font-size: 15px; line-height: 1.6; margin-bottom: 26px; max-width: 46ch; }
+  .price-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 26px;
+    margin-bottom: 22px;
+  }
+  .price-row { display: flex; align-items: baseline; gap: 12px; margin-bottom: 4px; }
+  .price-current { font-family: 'Sora', sans-serif; font-size: 40px; font-weight: 800; }
+  .price-original { color: var(--muted); text-decoration: line-through; font-size: 18px; }
+  .price-note { color: var(--muted); font-size: 13px; margin-bottom: 20px; }
+  .coupon-row { display: flex; gap: 10px; }
+  .coupon-row input {
+    flex: 1;
+    padding: 13px 16px;
+    border-radius: 12px;
+    border: 1.5px solid var(--border);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    outline: none;
+    color: var(--ink);
+  }
+  .coupon-row input:focus { border-color: var(--coral); }
+  .coupon-row button {
+    padding: 13px 22px;
+    border-radius: 12px;
+    border: none;
+    background: var(--coral);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background .15s;
+    white-space: nowrap;
+  }
+  .coupon-row button:hover { background: var(--coral-dark); }
+  .coupon-row button:disabled { opacity: 0.6; cursor: not-allowed; }
+  .buy-btn {
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    border: none;
+    background: var(--ink);
+    color: white;
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .log-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 22px 24px;
+  }
+  .log-block h3 { font-size: 14px; margin: 0 0 12px; color: var(--muted); font-weight: 600; }
+  .log-entry {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 13px;
+  }
+  .log-entry:last-child { border-bottom: none; }
+  .log-entry .ok { color: var(--success); font-weight: 700; }
+  .log-entry .fail { color: var(--muted); }
+  .log-empty { color: var(--muted); font-size: 13px; padding: 6px 0; }
+  footer {
+    text-align: center; color: var(--muted); font-size: 13px; padding: 30px; border-top: 1px solid var(--border);
+  }
+  @media (max-width: 820px) {
+    main { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <div class="logo-mark">TC</div>
+    TuneCraft Audio
+  </div>
+  <nav>
+    <a href="#">Headphones</a>
+    <a href="#">Speakers</a>
+    <a href="#">Support</a>
+  </nav>
+</header>
+
+<main>
+  <div class="product-visual">
+    <svg class="headphone-icon" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M40 110 V90 C40 50 66 20 100 20 C134 20 160 50 160 90 V110" stroke="white" stroke-width="8" stroke-linecap="round"/>
+      <rect x="28" y="105" width="26" height="50" rx="13" fill="white"/>
+      <rect x="146" y="105" width="26" height="50" rx="13" fill="white"/>
+    </svg>
+  </div>
+
+  <div>
+    <div class="badge-row">
+      <span class="badge">Bestseller</span>
+      <span class="badge teal">Free Shipping</span>
+    </div>
+    <h1 class="title">Aria Pro Wireless Headphones</h1>
+    <p class="subtitle">Active noise cancellation, 40-hour battery life, and studio-tuned sound — built for people who take their music seriously.</p>
+
+    <div class="price-block">
+      <div class="price-row">
+        <span class="price-current" id="currentPrice">₹6,499</span>
+        <span class="price-original" id="originalPrice"></span>
+      </div>
+      <div class="price-note" id="priceNote">Inclusive of all taxes</div>
+
+      <div class="coupon-row">
+        <input id="couponInput" type="text" placeholder="Enter coupon code" value="FESTIVE20" />
+        <button id="applyBtn" onclick="applyCoupon()">Apply</button>
+      </div>
+    </div>
+
+    <button class="buy-btn">Add to Cart</button>
+
+    <div class="log-block" style="margin-top: 22px;">
+      <h3>Activity log</h3>
+      <div id="logList"><div class="log-empty">No coupon attempts yet.</div></div>
+    </div>
+  </div>
+</main>
+
+<footer>TuneCraft Audio — demo storefront for testing purposes.</footer>
+
+<script>
+  const ORIGINAL_PRICE = 6499;
+
+  async function refreshStatus() {
+    const res = await fetch('/api/cart-status');
+    const data = await res.json();
+    render(data);
+  }
+
+  function render(data) {
+    document.getElementById('currentPrice').textContent = '₹' + data.price.toLocaleString('en-IN');
+    document.getElementById('originalPrice').textContent = data.price < ORIGINAL_PRICE ? '₹' + ORIGINAL_PRICE.toLocaleString('en-IN') : '';
+    document.getElementById('priceNote').textContent = data.couponApplyCount > 0
+      ? `Coupon applied ${data.couponApplyCount} time(s) — inclusive of all taxes`
+      : 'Inclusive of all taxes';
+  }
+
+  function addLog(text, ok) {
+    const list = document.getElementById('logList');
+    if (list.querySelector('.log-empty')) list.innerHTML = '';
+    const row = document.createElement('div');
+    row.className = 'log-entry';
+    const time = new Date().toLocaleTimeString();
+    row.innerHTML = `<span>${text}</span><span class="${ok ? 'ok' : 'fail'}">${time}</span>`;
+    list.prepend(row);
+  }
+
+  async function applyCoupon() {
+    const code = document.getElementById('couponInput').value.trim();
+    const btn = document.getElementById('applyBtn');
+    btn.disabled = true;
+    try {
+      const res = await fetch('/api/apply-coupon', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ code }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        addLog(`Coupon applied — new price ₹${data.price.toLocaleString('en-IN')}`, true);
+      } else {
+        addLog(data.error || 'Coupon could not be applied', false);
+      }
+      await refreshStatus();
+    } catch (e) {
+      addLog('Request failed', false);
+    }
+    btn.disabled = false;
+  }
+
+  refreshStatus();
+  setInterval(refreshStatus, 3000);
+</script>
+
+</body>
+</html>
