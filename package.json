@@ -1,0 +1,11 @@
+{
+  "name": "race-condition-lab",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node vulnerable-server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
